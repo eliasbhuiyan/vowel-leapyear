@@ -1,0 +1,200 @@
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+}
+
+.form .form_front {
+    background-color: #212121;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    backface-visibility: hidden;
+    padding: 65px 45px;
+    border-radius: 15px;
+    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 1),
+        inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+}
+
+.form .form_back {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(-180deg);
+    padding: 65px 45px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+    text-align: center;
+}
+
+.form_details {
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    color: wheat;
+    text-align: center;
+}
+
+.form_back .form_details {
+    color: #3c3b3b;
+}
+
+.printvalue {
+    color: green;
+}
+
+.input {
+    width: 245px;
+    min-height: 45px;
+    color: #fff;
+    outline: none;
+    transition: 0.35s;
+    padding: 0px 7px;
+    background-color: #212121;
+    border-radius: 6px;
+    border: 2px solid #212121;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 1),
+        1px 1px 10px rgba(255, 255, 255, 0.6);
+}
+
+.input::placeholder {
+    color: #999;
+}
+
+.input:focus {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 1),
+        1px 1px 10px rgba(255, 255, 255, 0.6),
+        inset 2px 2px 10px rgba(0, 0, 0, 1),
+        inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+}
+
+.btn {
+    border: none;
+    background-color: transparent;
+    margin-top: 20px;
+}
+
+.btn label {
+    padding: 10px 35px;
+    cursor: pointer;
+    background-color: #212121;
+    border-radius: 6px;
+    border: 2px solid #212121;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 1),
+        1px 1px 10px rgba(255, 255, 255, 0.6);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.35s;
+}
+
+.btn label:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 1),
+        1px 1px 10px rgba(255, 255, 255, 0.6),
+        inset 2px 2px 10px rgba(0, 0, 0, 1),
+        inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+}
+.form .switch .signup_tog {
+    font-size: 13px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+.container #signup_toggle {
+    display: none;
+}
+.container #signup_toggle:checked+.form {
+    transform: rotateY(-180deg);
+}
+/* ===================*/
+ .leap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 2.5em;
+    border-radius: 25px;
+    transition: .4s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 1px 2px 2px;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+  
+  .leap:hover {
+    border: 1px solid #171717;
+    box-shadow: 10px 10px 0px #666666;
+    transform: translate(-51%);
+    -webkit-transform: translate(-51%);
+    -moz-transform: translate(-51%);
+    -ms-transform: translate(-51%);
+    -o-transform: translate(-51%);
+}
+  
+  .heading {
+    color: black;
+    padding-bottom: 2em;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .leap .leapYear {
+    border-radius: 5px;
+    border: 1px solid whitesmoke;
+    background-color: whitesmoke;
+    outline: none;
+    padding: 0.7em;
+    transition: .4s ease-in-out;
+  }
+  
+  .leap .leapYear:hover {
+    box-shadow: 6px 6px 0px #969696,
+               -3px -3px 10px #ffffff;
+  }
+  
+  .leap .leapYear:focus {
+    background: #ffffff;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+  }
+  
+  .leap .leapCheck {
+    margin-top: 2em;
+    align-self: center;
+    padding: 0.7em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    transition: .4s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
+  }
+  
+  .leap .leapCheck:hover {
+    box-shadow: 6px 6px 0px #969696,
+               -3px -3px 10px #ffffff;
+    transform: translateX(-0.5em) translateY(-0.5em);
+  }
+  
+  .leap .leapCheck:active {
+    transition: .2s;
+    transform: translateX(0em) translateY(0em);
+    box-shadow: none;
+  }
